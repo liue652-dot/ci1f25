@@ -1,0 +1,78 @@
+.yusei-magic-regular {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: 'Yusei Magic', sans-serif;
+  color: #000;
+}
+
+.laksa {
+  width: 100%;
+  min-height: 1050px; 
+  position: relative;
+  background: white;
+  overflow: hidden; 
+  }
+
+.title {
+  position: absolute;
+  left: 601px;
+  top: 17px;
+  width: 238px;
+  height: 151px;
+  text-align: center;
+  color: black;
+  font-size: 47px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.ingredients {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 574px;
+  height: 1015px;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.directions {
+  position: absolute;
+  left: 960px;
+  top: 0;
+  width: 480px;
+  height: 999px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.laksa-img {
+  width: 391px;
+  height: 305px;
+  position: absolute;
+  left: 524px;
+  object-fit: cover;
+}
+
+.laksa-img.img1 { top: 101px; }
+.laksa-img.img2 { top: 410px; }
+.laksa-img.img3 { top: 719px; }
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}

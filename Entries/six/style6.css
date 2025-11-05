@@ -1,0 +1,101 @@
+.yusei-magic-regular {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sg {
+  	width: 100%;
+  	height: 1024px;
+  	position: relative;
+  	overflow: hidden;
+  	text-align: center;
+  	font-size: 50px;
+  	color: #ddd;
+  	font-family: "Yusei Magic", sans-serif;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;   
+  height: 100vh;  
+  background-color: #ff0000;
+  z-index: -1;    
+}
+.misshome {
+  	position: fixed;
+  	top: 180px;
+  	left: 4px;
+  	font-size: 350px;
+  	display: inline-block;
+  	width: 1445px;
+  	height: 448px;
+	color: #ddd;
+	font-family: "Yusei Magic", sans-serif;
+}
+.singlish {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;      
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: 205px;              
+  top: 0px;
+  font-size: clamp(20px, 4vw, 47px); 
+  color: #000;
+  text-align: justify;
+  width: calc(100% - 220px);  
+  max-width: 85%;             
+  height: auto;
+  font-family: "Yusei Magic", sans-serif;
+  overflow-wrap: break-word;   
+}
+
+@media (max-width: 768px) {
+  .singlish {
+    left: 10px;                
+    font-size: clamp(16px, 5vw, 35px); 
+  }
+}
+
+.back-home {
+  position: fixed;
+  top: 80px;
+  left: 23px;
+  display: inline-block;
+  width: 166px;
+  height: 144px;
+  font-family: "Yusei Magic", sans-serif;
+  color: #ddd;
+  z-index: 10; 
+}
+
+.cn {
+  position: fixed; 
+  top: 85%; 
+  left: 23px;
+  display: inline-block;
+  width: 166px;
+  height: 79px;
+  color: #ddd;
+  z-index: 10; 
+}
+
+.nvm {
+  position: fixed;
+  top: 0px;
+  left: 23px;
+  display: inline-block;
+  width: 166px;
+  height: 80px;
+  font-family: "Yusei Magic", sans-serif;
+  color: #ddd;
+  z-index: 10; 
+}
+
+.nvm:hover, .cn:hover, .back-home:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}

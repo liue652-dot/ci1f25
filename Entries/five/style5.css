@@ -1,0 +1,89 @@
+@font-face {
+font-family: "VTCMartinTrial-Bold";
+src: url("fonts/VTCMartinTrial-Bold.woff2") format("woff2");
+ }
+
+@font-face {
+font-family: "VTCMartinTrial-Light";
+src: url("fonts/VTCMartinTrial-Light.woff2") format("woff2");
+}
+
+ p { 
+      flex: 3; 
+      order: 2;
+      font-family: serif;
+      padding: 1em;
+      font-size: 2em;
+    }
+
+h1 {
+  position: fixed;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  text-align: center;
+  bottom: 0%;
+  color: rgb(0, 0, 0);                       
+  font-size: 4rem;
+  margin: 0;
+    left: 25%;
+    font-family: "VTCMartinTrial-Bold", sans-serif;
+  flex: 3; 
+}
+
+p {
+  position: fixed;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  bottom: 10%;
+  color: rgb(0, 0, 0);                       
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "VTCMartinTrial-Light", sans-serif;
+  flex: 3; 
+}
+
+.background-image {
+width: 1554px;
+height: 777px;
+aspect-ratio: 2/1;
+position: fixed;
+left: -57px;
+overflow: show;
+z-index: 0;
+}
+
+.img1, .img2, .img3 {
+  width: 240px;
+  height: 350px;
+  position: absolute;
+  opacity: 0;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.img1 { left: 934px; top: 48px; animation-name: flyInRight; animation-delay: 0.4s; }
+.img2 { left: 678px; top: -29px; animation-name: flyInTop; animation-delay: 0.6s; }
+.img3 { left: 145px; top: 18px; animation-name: flyInLeft; animation-delay: 0.8s; }
+
+@keyframes flyInRight {
+  from { transform: translateX(300px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes flyInLeft {
+  from { transform: translateX(-300px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes flyInTop {
+  from { transform: translateY(-200px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+a {
+    color: #000000;
+    text-decoration: underline;
+}

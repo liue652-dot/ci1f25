@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #c62626;
+  font-size: 48px;
+}
+
+.desktop {
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.desktop a {
+  display: inline-block;
+  margin: 8px;
+}
+
+.desktop img {
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.desktop img:hover {
+  transform: scale(1.5);
+  z-index: 10;
+  position: relative;
+}

@@ -1,0 +1,88 @@
+@font-face {
+font-family: "VTCMartinTrial-Bold"; 
+src: url("fonts/VTCMartinTrial-Bold.woff2") format("woff2");
+ }
+
+@font-face {
+font-family: "VTCMartinTrial-Light";
+src: url("fonts/VTCMartinTrial-Light.woff2") format("woff2");
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: white;
+  overflow: show;
+}
+
+.title {
+  width: 669px;
+  height: 56px;
+  left: 385px;
+  top: 28px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  font-family: "VTCMartinTrial-Bold", sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  z-index: 10;
+}
+
+.america {
+  width: 825px;
+  height: 910px;
+  left: 307px;
+  top: 70px;
+  position: absolute;
+  z-index: 0;
+}
+
+.didusa {
+  top: 500px;
+  left: 37px;
+  width: 240px;
+  height: 355px;
+  position: absolute;
+}
+.didusa1 {
+  top: 460px;
+  left: 511px;
+  width: 98px;
+  height: 130px;
+  position: absolute;
+}
+.didusa2 {
+  top: 410px;
+  left: 938px;
+  width: 98px;
+  height: 130px;
+  position: absolute;
+}
+
+.didusa1, .didusa2 {
+  width: 98px;
+  height: 130px;
+  position: absolute;
+  opacity: 0; /* start hidden */
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.didusa1 { top: 460px; left: 511px; animation-name: enterFromBottom; }
+.didusa2 { top: 410px; left: 938px; animation-name: enterFromRight; }
+
+@keyframes enterFromRight {
+  from { transform: translateX(100vw); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes enterFromBottom {
+  from { transform: translateY(100vh); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.didusa2 { animation-delay: 0.2s; }

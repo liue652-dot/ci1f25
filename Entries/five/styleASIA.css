@@ -1,0 +1,119 @@
+@font-face {
+font-family: "VTCMartinTrial-Bold"; /* This is an arbitrary name -- */
+src: url("fonts/VTCMartinTrial-Bold.woff2") format("woff2");
+ }
+
+@font-face {
+font-family: "VTCMartinTrial-Light";
+src: url("fonts/VTCMartinTrial-Light.woff2") format("woff2");
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: white;
+  overflow: show;
+}
+
+.title {
+  width: 669px;
+  height: 56px;
+  left: 385px;
+  top: 28px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  font-family: "Lalezar", sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  z-index: 10; 
+  font-family: "VTCMartinTrial-Bold
+}
+
+.background {
+  width: 1490px;
+  height: 966px;
+  left: -25px;
+  top: 58px;
+  position: absolute
+}
+
+.didasia1, .didasia2, .didasia3, .didasia4, 
+.didasia5, .didasia6, .didasia7, .didasia8, 
+.didasia9, .didasia10, .didasia11, .didasia12 {
+  width: 98px;
+  height: 130px;
+  position: absolute;
+  z-index: 5; 
+}
+
+.didasia1  { left: 1100px; top: 401px; }
+.didasia2  { left: 964px;  top: 171px; }
+.didasia3  { left: 852px;  top: 264px; }
+.didasia4  { left: 964px;  top: 351px; }
+.didasia5  { left: 644px;  top: 246px; }
+.didasia6  { left: 1234px; top: 210px; }
+.didasia7  { left: 890px;  top: 488px; }
+.didasia8  { left: 982px;  top: 531px; }
+.didasia9  { left: 1046px; top: 620px; }
+.didasia10 { left: 933px;  top: 700px; }
+.didasia11 { left: 1046px; top: 728px; }
+.didasia12 { left: 956px;  top: 800px; }
+
+.didasia {
+  width: 240px;
+  height: 355px;
+  left: 34px;
+  top: 600px;
+  position: absolute;
+  z-index: 8; 
+}
+
+
+@keyframes enterFromLeft {
+  from { transform: translateX(-100vw); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes enterFromRight {
+  from { transform: translateX(100vw); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes enterFromTop {
+  from { transform: translateY(-100vh); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes enterFromBottom {
+  from { transform: translateY(100vh); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.didasia1, .didasia2, .didasia3, .didasia4,
+.didasia5, .didasia6, .didasia7, .didasia8,
+.didasia9, .didasia10, .didasia11, .didasia12 {
+  position: absolute;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.didasia1, .didasia5, .didasia9 {
+  animation-name: enterFromLeft;
+}
+
+.didasia2, .didasia6, .didasia10 {
+  animation-name: enterFromRight;
+}
+
+.didasia3, .didasia7, .didasia11 {
+  animation-name: enterFromTop;
+}
+
+.didasia4, .didasia8, .didasia12 {
+  animation-name: enterFromBottom;
+}

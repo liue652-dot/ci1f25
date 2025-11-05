@@ -1,0 +1,119 @@
+@font-face {
+font-family: "VTCMartinTrial-Bold"; /* This is an arbitrary name -- */
+src: url("fonts/VTCMartinTrial-Bold.woff2") format("woff2");
+ }
+
+@font-face {
+font-family: "VTCMartinTrial-Light";
+src: url("fonts/VTCMartinTrial-Light.woff2") format("woff2");
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: show;
+  background: white;
+}
+
+.title {
+  position: absolute;
+  top: 28px;
+  left: 385px;
+  width: 669px;
+  height: 56px;
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  font-family: "VTCMartinTrial-Bold", sans-serif;
+  font-weight: 400;
+  z-index: 10;
+}
+
+.europe {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  left: 222px;
+  top: 56px;
+  z-index: 0;
+}
+
+.dideurope1, .dideurope2, .dideurope3, .dideurope4 {
+  position: absolute;
+  width: 98px;
+  height: 130px;
+  z-index: 5;
+}
+
+.dideurope1 {
+     left: 622px; 
+     top: 660px; 
+    }
+
+.dideurope2 {
+     left: 698px; 
+     top: 835px; 
+    }
+
+.dideurope3 {
+     left: 425px; 
+     top: 475px; 
+    }
+
+.dideurope4 { 
+    left: 327px; 
+    top: 420px; 
+}
+
+.dideurope {
+  position: absolute;
+  width: 240px;
+  height: 355px;
+  left: 43px;
+  top: 651px;
+}
+
+.dideurope1, .dideurope2, .dideurope3, .dideurope4 {
+  width: 98px;
+  height: 130px;
+  position: absolute;
+  z-index: 5;
+  opacity: 0;               /* start hidden */
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.dideurope1 { left: 622px; top: 660px; animation-name: enterFromLeft; }
+.dideurope2 { left: 698px; top: 835px; animation-name: enterFromBottom; }
+.dideurope3 { left: 425px; top: 475px; animation-name: enterFromRight; }
+.dideurope4 { left: 327px; top: 420px; animation-name: enterFromTop; }
+
+@keyframes enterFromLeft {
+  from { transform: translateX(-100vw); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes enterFromRight {
+  from { transform: translateX(100vw); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes enterFromTop {
+  from { transform: translateY(-100vh); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes enterFromBottom {
+  from { transform: translateY(100vh); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

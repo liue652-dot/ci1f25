@@ -1,0 +1,129 @@
+.yusei-magic-regular {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-image: url(siximg/sgimg/beach.JPG);
+    background-size: cover;
+    background-position: center;
+    min-height: 1050px;
+  }
+.Singa {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.Laksa {
+    width: 391px;
+    height: 305px;
+    position: absolute;
+    left: 559px;
+    top: 168px;
+}
+
+.Chasiu {
+    width: 439px;
+    height: 436px;
+    position: absolute;
+    left: 15px;
+    top: 17px;
+}
+
+.Kaya {
+    width: 341px;
+    height: 336px;
+    position: absolute;
+    left: 504px;
+    top: 684px;
+}
+
+.Chickenrice {
+    width: 595px;
+    height: 573px;
+    position: absolute;
+    left: 819px;
+    top: 385px;
+}
+
+.Rotiprata {
+    width: 375px;
+    height: 375px;
+    position: absolute;
+    left: 1055px;
+    top: 10px;
+}
+
+.Kopi {
+    width: 293px;
+    height: 293px;
+    position: absolute;
+    left: 434.25px;
+    top: -51px;
+    transform: rotate(13deg);
+    transform-origin: top left;
+}
+
+.Milo {
+    width: 237px;
+    height: 237px;
+    position: absolute;
+    left: 845px;
+    top: 151.2px;
+    transform: rotate(-24deg);
+    transform-origin: top left;
+}
+
+.Mamee {
+    width: 195px;
+    height: 218px;
+    position: absolute;
+    left: 351.85px;
+    top: 475.42px;
+    transform: rotate(-42deg);
+    transform-origin: top left;
+}
+
+.Satay {
+    width: 486px;
+    height: 486px;
+    position: absolute;
+    left: 15px;
+    top: 533px;
+}
+
+.Aisgem {
+    width: 185px;
+    height: 203px;
+    position: absolute;
+    left: 606px;
+    top: 481px;
+}
+
+.HawkerCanMeh {
+    width: 238px;
+    height: 151px;
+    position: absolute;
+    left: 666px;
+    top: 17px;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    font-size: 47px;
+    font-family: 'Yusei Magic', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.Laksa:hover, .Chasiu:hover, .Kaya:hover, .Chickenrice:hover, .Rotiprata:hover, .Kopi:hover, .Milo:hover, .Mamee:hover, .Satay:hover, .Aisgem:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}

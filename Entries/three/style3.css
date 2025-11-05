@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lacquer', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../three/threimg/MAP.jpg');
+}
+
+.title {
+  font-family: 'Lacquer', sans-serif;
+  font-size: 50px;
+  color: rgb(210, 0, 0);
+  background-color: yellow; /* highlight effect */
+  padding: 10px 20px;
+  display: inline-block; 
+  position: center;
+}
+
+.face {
+  width: 714px;
+  height: 809px;
+  left: 363px;
+  top: 136px;
+  position: absolute;
+}
+
+.dot {
+  position: absolute;
+  background: #FF0000;
+  border-radius: 9999px;
+  border: 1px black solid;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transform-origin: top left;
+}
+
+#display {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  position: absolute;
+  top: 98px;
+  background-color: yellow;
+  max-width: 600px;
+}
+
+a {
+    color: #FF0000;
+    text-decoration: underline;
+}
