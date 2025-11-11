@@ -1,0 +1,151 @@
+body {
+  font-family: 'Judson', serif;
+  margin: 0;
+  background: white;
+  transition: background 0.5s ease;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.moods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 700px;
+}
+
+.mood {
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.mood:hover {
+  background: #ddd;
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content li {
+  margin: 10px 0;
+}
+
+.modal-content a {
+  text-decoration: none;
+  color: black;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cozy-page { background: #fff5e1; opacity: 60%;}
+.madness-page { background: #d9d9d9; opacity: 60%;}
+.nostalgic-page { background: #e4e0ff; opacity: 60%;}
+.excited-page { background: #fff0c2; opacity: 60%;}
+.cultural-page { background: #f3ffe3; opacity: 60%;}
+.minimal-page { background: #e8f4f8; opacity: 60%;}
+
+.cozy-bg { background: #fff1d6; }
+.madness-bg { background: #c9c9c9; }
+.nostalgic-bg { background: #e1dbff; }
+.excited-bg { background: #ffe89c; }
+.cultural-bg { background: #e9ffd4; }
+.minimal-bg { background: #dff6fb; }
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  .mood { font-size: 1rem; padding: 10px 15px; }
+}
+
+.cozy-page { 
+  background: url('eigimg/cozy.jpg') no-repeat center center/cover; 
+}
+.madness-page { 
+  background: url('eigimg/madnness.jpg') no-repeat center center/cover; 
+}
+.nostalgic-page { 
+  background: url('eigimg/nostalgic.jpg') no-repeat center center/cover; 
+}
+.excited-page { 
+  background: url('eigimg/excited.jpg') no-repeat center center/cover; 
+}
+.cultural-page { 
+  background: url('eigimg/culture.jpg') no-repeat center center/cover; 
+}
+.minimal-page { 
+  background: url('eigimg/minimal.jpg') no-repeat center center/cover; 
+}
+
+.modal-content h2, 
+.modal-content a, 
+.modal-content li {
+  color: inherit;
+}
+
+.moods {
+  position: relative;
+  z-index: 1;
+}
+
+.modal-open .moods {
+  z-index: -1;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.1);
+}

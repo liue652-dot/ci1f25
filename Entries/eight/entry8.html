@@ -3,6 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eight</title>
+  <title>Mood Music</title>
   <link rel="stylesheet" href="style8.css">
 </head>
+<body>
+
+  <div class="container">
+    <h1><a href="../landing/Landing.html">How are you Feeling?</a></h1>
+    <div class="moods" id="moods">
+      <a href="#cozyModal" class="mood" data-bg="cozy">Cozy, warm, content</a>
+      <a href="#madnessModal" class="mood" data-bg="madness">Madness, violent, cold</a>
+      <a href="#nostalgicModal" class="mood" data-bg="nostalgic">Nostalgic, tired, sad</a>
+      <a href="#excitedModal" class="mood" data-bg="excited">Excited, upbeat, active</a>
+      <a href="#culturalModal" class="mood" data-bg="cultural">Cultural, explorative</a>
+      <a href="#minimalModal" class="mood" data-bg="minimal">Minimal, Experimental</a>
+    </div>
+  </div>
+
+  <div id="cozyModal" class="modal">
+    <div class="modal-content cozy-bg">
+      <span class="close">&times;</span>
+      <h2>Cozy, Warm, Content</h2>
+      <ul>
+        <li><a href="#">Norah Jones – Don’t Know Why</a></li>
+        <li><a href="#">Chet Baker – My Funny Valentine</a></li>
+        <li><a href="#">Kings of Convenience – Misread</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="madnessModal" class="modal">
+    <div class="modal-content madness-bg">
+      <span class="close">&times;</span>
+      <h2>Madness, Violent, Cold</h2>
+      <ul>
+        <li><a href="#">Aphex Twin – Ventolin</a></li>
+        <li><a href="#">Nine Inch Nails – Closer</a></li>
+        <li><a href="#">Death Grips – Guillotine</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="nostalgicModal" class="modal">
+    <div class="modal-content nostalgic-bg">
+      <span class="close">&times;</span>
+      <h2>Nostalgic, Tired, Sad</h2>
+      <ul>
+        <li><a href="#">Radiohead – Motion Picture Soundtrack</a></li>
+        <li><a href="#">Billie Eilish – When the Party’s Over</a></li>
+        <li><a href="#">Bon Iver – Holocene</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="excitedModal" class="modal">
+    <div class="modal-content excited-bg">
+      <span class="close">&times;</span>
+      <h2>Excited, Upbeat, Active</h2>
+      <ul>
+        <li><a href="#">Daft Punk – One More Time</a></li>
+        <li><a href="#">Dua Lipa – Levitating</a></li>
+        <li><a href="#">Calvin Harris – Feel So Close</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="culturalModal" class="modal">
+    <div class="modal-content cultural-bg">
+      <span class="close">&times;</span>
+      <h2>Cultural, Explorative</h2>
+      <ul>
+        <li><a href="#">Fela Kuti – Water No Get Enemy</a></li>
+        <li><a href="#">Buena Vista Social Club – Chan Chan</a></li>
+        <li><a href="#">Anoushka Shankar – Land of Gold</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="minimalModal" class="modal">
+    <div class="modal-content minimal-bg">
+      <span class="close">&times;</span>
+      <h2>Minimal, Experimental</h2>
+      <ul>
+        <li><a href="#">Brian Eno – Ambient 1: Music for Airports</a></li>
+        <li><a href="#">Ryuichi Sakamoto – Andata</a></li>
+        <li><a href="#">Arca – Piel</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const modals = document.querySelectorAll(".modal");
+    const links = document.querySelectorAll(".mood");
+    const closes = document.querySelectorAll(".close");
+    const body = document.body;
+
+    links.forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute("href"));
+        target.style.display = "flex";
+        const bgClass = link.getAttribute("data-bg");
+        body.className = bgClass + "-page";
+      });
+    });
+
+    closes.forEach(close => {
+      close.addEventListener("click", () => {
+        modals.forEach(modal => modal.style.display = "none");
+        body.className = "";
+      });
+    });
+
+    window.addEventListener("click", e => {
+      if (e.target.classList.contains("modal")) {
+        e.target.style.display = "none";
+        body.className = "";
+      }
+    });
+  </script>
+
+</body>
+</html>
