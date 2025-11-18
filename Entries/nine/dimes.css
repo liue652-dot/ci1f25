@@ -1,0 +1,79 @@
+/* Basic Page Setup */
+body {
+    margin: 0;
+    background: rgb(180, 180, 180);
+    font-family: "Geist Mono", monospace;
+    overflow-x: hidden;
+}
+
+/* Container */
+.nyc {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background image responsive */
+.bg-img {
+width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+/* Responsive poem text */
+.poem-text {
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    width: 80vw;
+    color: red;
+    font-size: 4.5vw;     /* Mobile scaling */
+    font-weight: 400;
+    text-shadow: 0 0 2px black, 0 0 5px rgb(0, 0, 0), 0 4px 20px rgb(0, 0, 0);
+    z-index: 2;
+    line-height: 1.4;
+    text-align: right;
+}
+
+/* Larger screens get consistent type */
+@media (min-width: 768px) {
+    .poem-text {
+        font-size: 20px;
+    }
+}
+
+/* Clickable bike link container */
+.bike-link {
+    position: absolute;
+    bottom: 5vh;
+    width: 30vw;          
+    min-width: 140px;
+    z-index: 3;
+}
+
+/* Bike image itself */
+.bike {
+    width: 100%;
+    height: auto;
+    animation: ride 6s linear forwards;
+    pointer-events: auto;  /* keeps it clickable */
+}
+
+/* Bike animation */
+@keyframes ride {
+    0% {
+        transform: translateX(-140%);
+    }
+    90% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(250%);
+    }
+}

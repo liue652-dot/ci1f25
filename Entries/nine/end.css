@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Geist Mono", monospace;
+    overflow-x: hidden;
+}
+
+.nyc {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.poem-text {
+    position: absolute;
+    top: 10vh; /* Move to top center */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 80vw;
+    color: red;
+    font-size: 8vw; /* Further increase font size */    
+    font-weight: 500;
+    z-index: 3;
+    line-height: 2;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .poem-text {
+        font-size: 20px;
+    }
+}
+
+.bike-link {
+    position: absolute;
+    bottom: 5vh;
+    width: 30vw;          
+    min-width: 140px;
+    z-index: 3;
+}
+
+.bike {
+    width: 100%;
+    height: auto;
+    animation: ride 6s linear forwards;
+    pointer-events: auto;  
+}
+
+@keyframes ride {
+    0% {
+        transform: translateX(-140%);
+    }
+    90% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(250%);
+    }
+}

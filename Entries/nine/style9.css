@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    background: white;
+    font-family: "Geist Mono", monospace;
+    overflow-x: hidden;
+}
+
+.citybike {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-img {
+width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.title-text {
+    position: absolute;
+    left: 5vw;
+    bottom: 10vh;
+    width: 80vw;
+    font-weight: 400;
+    color: red;
+    font-size: 8vw;          
+    font-weight: 400;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    z-index: 2;
+}
+
+.bike-link {
+    position: absolute;
+    bottom: 5vh;
+    width: 30vw;              
+    min-width: 120px;
+    z-index: 3;
+}
+
+.bike {
+    width: 100%;
+    height: auto;
+    animation: ride 5s linear forwards; 
+    pointer-events: auto;    
+}
+
+@keyframes ride {
+    0% {
+        transform: translateX(-120%);
+    }
+    90% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(250%);
+    }
+}
+
+a {
+  color: red;
+  text-decoration: underline;
+}
