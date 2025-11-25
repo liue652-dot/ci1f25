@@ -29,3 +29,7 @@ document.querySelectorAll(".pill").forEach(btn => {
     showPopup(text, x, y);
   });
 });
+
+document.querySelector(".home-btn").addEventListener("click", () => {
+  window.location.href = "../landing/landing.html";
+});
