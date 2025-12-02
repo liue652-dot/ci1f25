@@ -17,9 +17,12 @@ body {
 }
 
 heading {
-  text-align: right;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  text-align: left;
   font-size: clamp(30px, 5vw, 60px);
-  margin: 20px;
+  margin: 0;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   color: wheat;
 }
@@ -46,7 +49,6 @@ heading {
 }
 
 
-/* FLUID ICON POSITIONS */
 .icon1 { top: 25%; left: 5%; }
 .icon2 { top: 20%; left: 38%; }
 .icon3 { top: 12%; left: 70%; }
@@ -57,20 +59,16 @@ heading {
 .icon8 { top: 32%; left: 30%; }
 .icon9 { top: 50%; left: 35%; }
 .icon10 { top: 48%; left: 85%; }
+.icon11 { top: 55%; left: 20%; }
 
-/* ICON STATES */
 .icon:visited,
 .icon:active,
-.icon:hover {
-  text-decoration: none;
-}
 
 .icon:focus {
   outline: 2px solid rgba(255,255,255,0.9);
   outline-offset: 4px;
 }
 
-/* RESPONSIVE FOR SMALL SCREENS */
 @media screen and (max-width: 480px) {
   .icon {
     width: 50px;

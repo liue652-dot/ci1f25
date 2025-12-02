@@ -1,0 +1,48 @@
+body {
+  background-color: black; 
+  color: white;
+  font-family: monospace;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.movie {
+  font-size: 24px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.button {
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
