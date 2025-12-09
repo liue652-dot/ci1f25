@@ -27,10 +27,10 @@
   	position: fixed;
   	top: 180px;
   	left: 4px;
-  	font-size: 350px;
-  	display: inline-block;
-  	width: 1445px;
-  	height: 448px;
+	font-size: clamp(80px, 20vw, 350px);
+	display: inline-block;
+	width: min(90vw, 1445px);
+	height: auto;
 	color: #ddd;
 	font-family: "Yusei Magic", sans-serif;
 }
