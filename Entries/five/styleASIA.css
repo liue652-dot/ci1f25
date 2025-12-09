@@ -1,119 +1,102 @@
 @font-face {
-font-family: "VTCMartinTrial-Bold"; /* This is an arbitrary name -- */
-src: url("fonts/VTCMartinTrial-Bold.woff2") format("woff2");
- }
+  font-family: "VTCMartinTrial-Bold";
+  src: url("fonts 5/VTCMartinTrial-Bold.woff2") format("woff2");
+}
 
 @font-face {
-font-family: "VTCMartinTrial-Light";
-src: url("fonts/VTCMartinTrial-Light.woff2") format("woff2");
+  font-family: "VTCMartinTrial-Light";
+  src: url("fonts 5/VTCMartinTrial-Light.woff2") format("woff2");
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background: white;
-  overflow: show;
+* {
+  box-sizing: border-box;
 }
 
-.title {
-  width: 669px;
-  height: 56px;
-  left: 385px;
-  top: 28px;
-  position: absolute;
+body {
+  margin: 0;
+  font-family: "VTCMartinTrial-Light", Arial, sans-serif;
+  background: #fff;
+  color: #222;
   text-align: center;
-  color: black;
-  font-size: 50px;
-  font-family: "Lalezar", sans-serif;
-  font-weight: 400;
-  word-wrap: break-word;
-  z-index: 10; 
-  font-family: "VTCMartinTrial-Bold
 }
 
-.background {
-  width: 1490px;
-  height: 966px;
-  left: -25px;
-  top: 58px;
-  position: absolute
+.continent-page {
+  width: min(1100px, 95vw);
+  padding: 2rem 1.25rem 3rem;
+  margin: 0 auto;
 }
 
-.didasia1, .didasia2, .didasia3, .didasia4, 
-.didasia5, .didasia6, .didasia7, .didasia8, 
-.didasia9, .didasia10, .didasia11, .didasia12 {
-  width: 98px;
-  height: 130px;
+.title-link {
+  display: inline-block;
+  font-family: "VTCMartinTrial-Bold", Arial, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.continent-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.feature-card {
+  width: min(360px, 60vw);
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.map-frame {
+  width: 100%;
+  position: relative;
+  max-width: 1040px;
+}
+
+.map-image {
+  width: 105%;
+  height: auto;
+  display: block;
+  margin-left: -2.5%;
+}
+
+.pin {
   position: absolute;
-  z-index: 5; 
+  width: 7%;
+  animation: pinFloat 4s ease-in-out infinite;
 }
 
-.didasia1  { left: 1100px; top: 401px; }
-.didasia2  { left: 964px;  top: 171px; }
-.didasia3  { left: 852px;  top: 264px; }
-.didasia4  { left: 964px;  top: 351px; }
-.didasia5  { left: 644px;  top: 246px; }
-.didasia6  { left: 1234px; top: 210px; }
-.didasia7  { left: 890px;  top: 488px; }
-.didasia8  { left: 982px;  top: 531px; }
-.didasia9  { left: 1046px; top: 620px; }
-.didasia10 { left: 933px;  top: 700px; }
-.didasia11 { left: 1046px; top: 728px; }
-.didasia12 { left: 956px;  top: 800px; }
+.pin--asia-1 { left: 75.5%; top: 35.5%; animation-delay: 0.1s; }
+.pin--asia-2 { left: 66.4%; top: 11.7%; animation-delay: 0.2s; }
+.pin--asia-3 { left: 58.9%; top: 21.3%; animation-delay: 0.3s; }
+.pin--asia-4 { left: 66.4%; top: 30.3%; animation-delay: 0.4s; }
+.pin--asia-5 { left: 44.9%; top: 19.5%; animation-delay: 0.5s; }
+.pin--asia-6 { left: 84.5%; top: 15.7%; animation-delay: 0.6s; }
+.pin--asia-7 { left: 61.4%; top: 44.5%; animation-delay: 0.7s; }
+.pin--asia-8 { left: 67.6%; top: 49%; animation-delay: 0.8s; }
+.pin--asia-9 { left: 71.9%; top: 58.2%; animation-delay: 0.9s; }
+.pin--asia-10 { left: 64.3%; top: 66.5%; animation-delay: 1s; }
+.pin--asia-11 { left: 71.9%; top: 69.4%; animation-delay: 1.1s; }
+.pin--asia-12 { left: 65.8%; top: 76.8%; animation-delay: 1.2s; }
 
-.didasia {
-  width: 240px;
-  height: 355px;
-  left: 34px;
-  top: 600px;
-  position: absolute;
-  z-index: 8; 
+@keyframes pinFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
+@media (max-width: 640px) {
+  .title-link {
+    font-size: 2rem;
+  }
 
-@keyframes enterFromLeft {
-  from { transform: translateX(-100vw); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes enterFromRight {
-  from { transform: translateX(100vw); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes enterFromTop {
-  from { transform: translateY(-100vh); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes enterFromBottom {
-  from { transform: translateY(100vh); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.didasia1, .didasia2, .didasia3, .didasia4,
-.didasia5, .didasia6, .didasia7, .didasia8,
-.didasia9, .didasia10, .didasia11, .didasia12 {
-  position: absolute;
-  opacity: 0;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
-.didasia1, .didasia5, .didasia9 {
-  animation-name: enterFromLeft;
-}
-
-.didasia2, .didasia6, .didasia10 {
-  animation-name: enterFromRight;
-}
-
-.didasia3, .didasia7, .didasia11 {
-  animation-name: enterFromTop;
-}
-
-.didasia4, .didasia8, .didasia12 {
-  animation-name: enterFromBottom;
+  .feature-card {
+    width: 60%;
+  }
 }
