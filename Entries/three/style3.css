@@ -1,29 +1,40 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 40px 20px 80px;
   font-family: 'Lacquer', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 24px;
+  min-height: 100vh;
   background-image: url('../three/threimg/MAP.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .title {
   font-family: 'Lacquer', sans-serif;
-  font-size: 50px;
+  font-size: clamp(32px, 5vw, 50px);
   color: rgb(210, 0, 0);
-  background-color: yellow; /* highlight effect */
+  background-color: yellow;
   padding: 10px 20px;
-  display: inline-block; 
-  position: center;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.visual {
+  position: relative;
+  width: min(90vw, 714px);
+  max-width: 714px;
+  margin: 0 auto;
 }
 
 .face {
-  width: 714px;
-  height: 809px;
-  left: 363px;
-  top: 136px;
-  position: absolute;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .dot {
@@ -34,16 +45,22 @@ body {
   cursor: pointer;
   transform: rotate(180deg);
   transform-origin: top left;
+  left: calc(var(--left, 0) * 1%);
+  top: calc(var(--top, 0) * 1%);
+  width: calc(var(--dot-width, 8) / 714 * 100%);
+  height: calc(var(--dot-height, 8) / 809 * 100%);
+  min-width: 6px;
+  min-height: 6px;
 }
 
 #display {
-  width: 100%;
+  width: min(90vw, 600px);
   text-align: center;
-  font-size: 24px;
-  position: absolute;
-  top: 98px;
+  font-size: clamp(18px, 2vw, 24px);
   background-color: yellow;
-  max-width: 600px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 a {

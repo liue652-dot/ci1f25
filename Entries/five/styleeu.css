@@ -91,3 +91,8 @@ body {
     width: 60%;
   }
 }
+
+a {
+  color: black;
+  text-decoration: underline;
+}
