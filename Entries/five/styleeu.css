@@ -1,76 +1,115 @@
-@font-face {
-  font-family: "VTCMartinTrial-Bold";
-  src: url("fonts 5/VTCMartinTrial-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "VTCMartinTrial-Light";
-  src: url("fonts 5/VTCMartinTrial-Light.woff2") format("woff2");
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family: "VTCMartinTrial-Light", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background: #fff;
   color: #222;
   text-align: center;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .continent-page {
-  width: min(1100px, 95vw);
-  padding: 2rem 1.25rem 3rem;
+  width: min(980px, 95vw);
   margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
 }
 
 .title-link {
   display: inline-block;
-  font-family: "VTCMartinTrial-Bold", Arial, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   margin-bottom: 1.5rem;
-  color: inherit;
-  text-decoration: none;
 }
 
 .continent-layout {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  justify-content: flex-start;
   align-items: center;
+  gap: 2rem;
 }
 
 .feature-card {
-  width: min(360px, 60vw);
-  height: auto;
-  margin-bottom: 0.5rem;
+  width: min(360px, 70vw);
+  border-radius: 16px;
 }
 
 .map-frame {
-  width: 100%;
   position: relative;
-  max-width: 960px;
+  width: min(960px, 100%);
 }
 
 .map-image {
   width: 100%;
-  height: auto;
   display: block;
 }
 
 .pin {
   position: absolute;
   width: 10%;
-  animation: pinFloat 4s ease-in-out infinite;
+  opacity: 0;
 }
 
-.pin--europe-one { left: 40%; top: 58%; animation-delay: 0.2s; }
-.pin--europe-two { left: 48%; top: 75%; animation-delay: 0.4s; }
-.pin--europe-three { left: 20%; top: 40%; animation-delay: 0.6s; }
-.pin--europe-four { left: 12%; top: 34%; animation-delay: 0.8s; }
+.pin--europe-one {
+  left: 40%;
+  top: 58%;
+  animation: enterFromLeft 0.6s ease-out forwards,
+    pinFloat 4s ease-in-out 0.6s infinite;
+}
+.pin--europe-two {
+  left: 48%;
+  top: 75%;
+  animation: enterFromBottom 0.7s ease-out forwards,
+    pinFloat 4s ease-in-out 0.7s infinite;
+}
+.pin--europe-three {
+  left: 20%;
+  top: 40%;
+  animation: enterFromLeft 0.65s ease-out forwards,
+    pinFloat 4s ease-in-out 0.65s infinite;
+}
+.pin--europe-four {
+  left: 12%;
+  top: 34%;
+  animation: enterFromTop 0.7s ease-out forwards,
+    pinFloat 4s ease-in-out 0.7s infinite;
+}
+
+@keyframes enterFromLeft {
+  from {
+    transform: translateX(-110vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromTop {
+  from {
+    transform: translateY(-85vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromBottom {
+  from {
+    transform: translateY(85vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 @keyframes pinFloat {
   0%,
@@ -84,15 +123,14 @@ body {
 
 @media (max-width: 640px) {
   .title-link {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .feature-card {
-    width: 60%;
+    width: 65%;
   }
-}
 
-a {
-  color: black;
-  text-decoration: underline;
+  .pin {
+    width: 14%;
+  }
 }

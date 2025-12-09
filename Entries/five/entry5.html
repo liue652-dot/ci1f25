@@ -35,5 +35,34 @@
       </div>
     </section>
   </main>
+  <script>
+    (function () {
+      const vectors = [
+        { x: "-120vw", y: "-20vh" },
+        { x: "-95vw", y: "45vh" },
+        { x: "110vw", y: "-35vh" },
+        { x: "85vw", y: "65vh" },
+        { x: "-40vw", y: "-85vh" },
+        { x: "25vw", y: "90vh" },
+        { x: "-110vw", y: "15vh" },
+        { x: "10vw", y: "-95vh" }
+      ];
+
+      const pins = document.querySelectorAll(".pin");
+      pins.forEach((pin, index) => {
+        const choice =
+          vectors.splice(Math.floor(Math.random() * vectors.length), 1)[0] ||
+          { x: "0", y: "-80vh" };
+
+        const delay = (Math.random() * 0.4 + index * 0.05).toFixed(2);
+        const duration = (Math.random() * 0.25 + 0.45).toFixed(2);
+
+        pin.style.setProperty("--pin-enter-x", choice.x);
+        pin.style.setProperty("--pin-enter-y", choice.y);
+        pin.style.setProperty("--pin-delay", `${delay}s`);
+        pin.style.setProperty("--pin-in-duration", `${duration}s`);
+      });
+    })();
+  </script>
 </body>
 </html>
